@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.js"></script>
+</head>
+<body>
+<!-- исключаем из рендернига джанго кусок кода  -->
+{% verbatim %}
+
+<div class="container" id="orders_app">
+
+<div class="btn btn-success btl-lg" v-for="order in orders">
+Description: {{order.description}}
+    <br>
+    Amount: {{order.amount}}
+
+</div>
+</div>
+{% endverbatim %}
+</body>
+
+<script src="/static/app.js"></script>
+</html>
